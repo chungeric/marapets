@@ -1,0 +1,331 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<style>
+#background {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin-top: 5px;
+	border-bottom: 1px solid #DFDFDF;
+	color: #3B3E52;
+}
+.page h1 {
+	text-align: center;
+}
+.page h2 {
+	background: #956E56;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: white;
+	padding-left: 4px;
+	opacity: 0.8;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+}
+#wrapper {
+	width: 688px;
+	height: 800px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	border: 1px solid white;
+}
+#announcement {
+	width: 100%;
+	height: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	background-color: #ffffff;
+	box-shadow: inset 0px 0px 10px #BBBBBB;
+	margin-bottom: 18px;
+	border-radius: 4px;
+}
+
+.container {
+	width: 88%;
+	height: 60%;
+	margin: 182px auto 0 auto;
+}
+.welcome {
+	height: 160px;
+	width: 50%;
+	margin: 0px auto 0 auto;
+	float:right;
+	background: #FDFFF1;
+	padding: 10px;
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+.clear {
+	clear: both;
+}
+.content {
+	width: 70%;
+	height: 350px;
+	margin-top: 20px;
+	float: right;
+	background: #FDFFF1;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.page{
+	width: 100%;
+	height: 100%;
+	background: #FDFFF1;
+	overflow-y: scroll;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.navlinks {
+	width: 26%;
+	height: 350px;
+	float: left;
+	margin-top: 20px;
+	background: #FDFFF1;
+	padding: 10px;
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+.navlinks ul li a {
+	text-decoration: none;
+	border-left: 3px solid #E6E8DA;
+	color: #000;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	padding-left: 4px;
+	transition: 0.4s ease-out;
+	letter-spacing: 1px;
+}
+.navlinks ul {
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+}
+.navlinks ul li {
+	margin-bottom: 6px;
+}
+.navlinks ul li a:hover {
+	padding-left: 20px;
+	border-left: 3px solid #3442AE;
+	background: #E6E8DA;
+	font-style: italic;
+}
+::-webkit-scrollbar-thumb:vertical {
+background-color:#BA6633;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+}
+::-webkit-scrollbar {
+width:5px;
+height:5px;
+background-color:#E2E2E2;
+}
+#credit, #credit a {
+	letter-spacing: 2px;
+	text-align: center;
+	color: #AB8130;
+}
+.cupcake1 {
+	position: absolute;
+	top: 240px;
+	left: 15px;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border: 3px solid yellow;
+	z-index: 1;
+	background-image: url(
+	http://i.imgur.com/SIGRmCt.jpg);
+	background-size: 200%;
+	background-position: 50% 45%;
+	box-shadow: 0 0 20px #999;
+	transition: 1s ease-in-out;
+}
+.cupcake1:hover {
+	transform: rotate(360deg);
+	filter: saturate(30%);
+}
+.cupcake2 {
+	position: absolute;
+	top: 320px;
+	left: 155px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid red;
+	z-index: 1;
+	background-image: url(
+	http://i.imgur.com/PORIC7w.jpg);
+	background-size: 300%;
+	background-position: 50% 40%;
+	box-shadow: 0 0 20px #999;
+	transition: 1s ease-in-out;
+}
+.cupcake2:hover {
+	transform: rotate(-360deg);
+	filter: saturate(30%);
+}
+.cupcake3 {
+	position: absolute;
+	top: 270px;
+	left: 260px;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	border: 3px solid #AA22CB;
+	z-index: 1;
+	box-shadow: 0 0 20px #999;
+	background-image: url(
+	http://i.imgur.com/4HMBHVw.jpg);
+	background-size: 400%;
+	background-position: 45% 20%;
+	transition: 1s ease-in-out;
+}
+.cupcake3:hover {
+	transform: rotate(360deg);
+	filter: saturate(30%);
+}
+</style>
+</head>
+<body>
+<img src="http://i.imgur.com/CCYlhJN.jpg" id="background">
+<a href=
+http://www.marapets.com/profile.php?id=4929832 target="_blank"><div class="cupcake1"></div></a>
+<div class="cupcake2"></div>
+<div class="cupcake3"></div>
+
+<div id="wrapper">
+	<div class="container">
+
+
+
+
+
+
+
+
+		<div id="announcement">
+			<marquee behavior="scroll" direction="left">Type any club announcements here... </marquee>
+		</div>
+
+
+
+
+
+
+		<div class="welcome">
+			<h1>Welcome to Cupcake Craze!</h1>
+			<p>Redeye steamed, organic latte doppio cup foam aroma. Flavour decaffeinated saucer so cultivar crema latte brewed. Variety, shop eu aftertaste that, black percolator grounds galão spoon foam. Organic redeye, bar frappuccino that caramelization spoon.</p>
+<p>Milk pumpkin spice percolator medium kopi-luwak half and half steamed. Percolator irish dark mazagran, at beans cappuccino trifecta galão. Caramelization, percolator, galão body coffee extraction rich filter aged to go. Robust, cream extra dark barista kopi-luwak acerbic wings robusta wings arabica extra.</p>
+<p>Sit breve, coffee café au lait, caffeine coffee so beans dripper eu medium. Cappuccino, french press robust galão aroma french press rich java. Rich macchiato barista macchiato wings as decaffeinated con panna galão caramelization. Blue mountain beans, so cream flavour, coffee plunger pot eu iced steamed viennese plunger pot.</p>
+<p>Siphon, bar whipped skinny barista turkish coffee. Froth, lungo a white black spoon galão aromatic robust. Single origin medium, redeye aroma aged half and half steamed cultivar. Acerbic strong body cappuccino robust aromatic, eu acerbic strong dark single shot.</p>
+		</div>
+
+
+
+
+<div class="clear"></div>
+
+
+
+
+		<div class="navlinks">
+		<h1>Club Links</h1>
+		<ul>
+			<li><a href=
+			#one>News</a></li>
+			<li><a href=
+			#two>Events</a></li>
+			<li><a href=
+			#three>Rules</a></li>
+			<li><a href=
+			#four>Marapets Help</a></li>
+			<li><a href=
+			#five>Names and Birthdays</a></li>
+			<li><a href=
+			#six>Entries and Results</a></li>
+		</ul>
+		</div>
+
+
+
+
+		<div class="content">
+			<div class="page">
+				<a name="one"></a>
+				<h1>News</h1>
+<p>Foam whipped americano single shot seasonal roast skinny turkish redeye percolator iced that, whipped ut doppio cup, lungo variety latte, seasonal rich extraction filter java. Foam, variety, a carajillo, spoon sugar black percolator macchiato blue mountain, steamed, extraction spoon, single shot, variety, aromatic cup, galão white doppio lungo bar to go roast. And, flavour at shop skinny aromatic decaffeinated white cappuccino a, doppio so ristretto espresso robusta single origin, caffeine caramelization, galão qui java beans saucer rich. Saucer, carajillo dark eu, that, java, aftertaste sweet, white half and half skinny cultivar, extraction grounds organic seasonal java irish café au lait froth. Sugar trifecta barista americano strong turkish con panna, latte cinnamon single shot mug sugar single origin aftertaste aged, brewed, organic as trifecta java as café au lait.</p>
+<br>
+<h2>21st July 2017</h2>
+<p>Coffee, dripper a macchiato, mocha breve, coffee strong, extra pumpkin spice cortado aroma cream, body, caramelization doppio, java cinnamon ut iced acerbic. Mazagran strong siphon cinnamon trifecta lungo affogato arabica et rich, cultivar strong, grinder organic crema dark white organic aged bar single shot. Decaffeinated, cinnamon single origin carajillo aromatic redeye, sit, single origin extra pumpkin spice that java, sugar, brewed cappuccino caffeine, seasonal qui, mazagran carajillo foam cinnamon instant. Foam mazagran breve grounds, coffee eu, turkish cappuccino strong turkish, ristretto, robusta cortado steamed froth caffeine sweet flavour. Extraction, aftertaste instant, pumpkin spice, dark grinder and macchiato, coffee irish, mazagran redeye spoon strong milk decaffeinated and saucer cappuccino.</p>
+<p>Cortado barista beans, brewed milk caramelization mug black brewed mug, robusta et extra, et wings aftertaste rich kopi-luwak dark. Black filter brewed carajillo aftertaste saucer barista, flavour cup, cappuccino, ristretto coffee aromatic macchiato mazagran coffee id brewed java. Shop, macchiato kopi-luwak brewed, est lungo spoon cortado half and half black saucer et body café au lait. Doppio filter wings, mocha trifecta arabica milk, beans java, single shot rich macchiato est redeye aged, percolator trifecta arabica sweet id medium. Macchiato, acerbic single shot plunger pot mazagran turkish et irish, so white mug french press barista extraction, qui, chicory ut caffeine latte qui so shop.</p>
+		</div>
+
+
+
+
+			<div class="page">
+				<a name="two"></a>
+				<h1>Events</h1>
+<p>Extraction, variety siphon viennese in, americano froth sugar crema, ristretto robust café au lait, ut siphon half and half decaffeinated galão. Single shot, grinder whipped, roast breve et instant fair trade organic, grinder, percolator, foam et, americano strong, extraction americano, caramelization mazagran white percolator that. In irish decaffeinated, lungo, ristretto, blue mountain sit as cinnamon, ut mug eu single origin americano trifecta, americano, and, coffee aftertaste body affogato cinnamon. Café au lait espresso, milk, dark steamed espresso rich, as, cinnamon medium spoon single shot, so french press as extraction arabica that. Milk wings chicory pumpkin spice, steamed qui, eu, coffee medium seasonal, espresso at latte breve froth.</p>
+<p>Bar est trifecta, cinnamon extra ristretto, plunger pot, galão, con panna cream half and half, that filter cortado viennese sit iced spoon. Steamed, cultivar iced robust, iced id, java, macchiato, fair trade sit steamed that irish shop, grounds cup, et, so sweet frappuccino cortado breve. Extra froth cup, instant french press half and half plunger pot ut sugar medium single shot, est to go instant and, grinder blue mountain galão café au lait acerbic. Variety that mocha cup ristretto brewed, viennese a mazagran, siphon white decaffeinated sweet robust saucer dripper mocha galão. Flavour coffee a iced blue mountain robust latte macchiato, bar mazagran half and half redeye coffee roast shop instant flavour doppio.</p>
+			</div>
+
+
+
+
+			<div class="page">
+				<a name="three"></a>
+				<h1>Rules</h1>
+<p></p>
+			</div>
+
+
+
+
+			<div class="page">
+				<a name="four"></a>
+				<h1>Marapets Help</h1>
+<p></p>
+			</div>
+
+
+
+
+			<div class="page">
+				<a name="five"></a>
+				<h1>Names and Birthdays</h1>
+<p></p>
+			</div>
+
+
+
+
+			<div class="page">
+				<a name="six"></a>
+				<h1>Entries and Results</h1>
+<p></p>
+			</div>
+		</div>
+
+
+
+
+		<div class="clear"></div>
+		<div id="credit"><p>Layout by <a href=
+		http://www.marapets.com/profile.php?id=2419422 target="_blank">Eric</a></p></div>
+	</div>
+</div>
+</body>
+</html>

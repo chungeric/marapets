@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta cht="utf-8">
+        <title>FCC Simon Game</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+    background-image: url('https://i.imgur.com/5HMlkwE.jpg');
+}
+
+.cred {
+    color: #373C5F;
+    text-decoration: underline;
+}
+
+.cred:hover {
+    color: #646A99;
+}
+
+.wrapper {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    font-size: 14px;
+}
+.gamecontainer {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #171717;
+    background: #313131;
+    position: relative;
+    -webkit-box-shadow: 10px 10px 42px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 42px -9px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 42px -9px rgba(0,0,0,0.75);
+}
+.tilecont {
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+.tile {
+    cursor: pointer;
+    position: absolute;
+    width: 92%;
+    height: 92%;
+}
+#tile1 {
+    background: #4C7348;
+    border-top-left-radius: 100%;
+    right: 6px;
+    bottom: 6px;
+}
+#tile2 {
+    background: #963737;
+    border-top-right-radius: 100%;
+    left: 6px;
+    bottom: 6px;
+}
+#tile3 {
+    background: #9CA54D;
+    border-bottom-left-radius: 100%;
+    right: 6px;
+    top: 6px;
+}
+#tile4 {
+    background: #505980;
+    border-bottom-right-radius: 100%;
+    left: 6px;
+    top: 6px;
+}
+#controlcont {
+    position: absolute;
+    right: 130px;
+    left: 130px;
+    top: 130px;
+    bottom: 130px;
+    border-radius: 50%;
+    background: #E0DFD6;
+    border: 12px solid #313131;
+
+}
+#control {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #8B8B85;
+    -webkit-box-shadow: inset 0px 0px 21px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 21px -4px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 21px -4px rgba(0,0,0,0.75);
+}
+#panel {
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+    text-align: center;
+}
+#title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: -6px;
+}
+.paneldiv {
+    text-align: center;
+    float: left;
+    width: 33%;
+    height: 50px;
+    font-size: 15px;
+}
+#counter {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 30px;
+    width: 90%;
+    color: #232323;
+    background: #210D0D;
+    border-radius: 2px;
+    margin-left: 5%;
+    -webkit-box-shadow: inset 0px 0px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 20px -4px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 20px -4px rgba(0,0,0,0.75);
+}
+#startbtn {
+    cursor: pointer;
+    position: relative;
+    margin-left: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #171717;
+}
+#startbtn:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: #A04545;
+}
+#strictbtn {
+    cursor: pointer;
+    position: relative;
+    margin-left: 13px;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #171717;
+}
+#strictbtn:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: #C6C855;
+}
+#strictlightcont {
+    position: relative;
+    margin-top: -10px;
+    margin-left: 43px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #000000;
+}
+#strictlight {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: #393836;
+}
+
+
+
+
+/* Credit: https://www.w3schools.com/howto/howto_css_switch.asp */
+
+/* The switch - the box around the slider */
+.switch {
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    color: #D69292;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCCCCC;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-box-shadow: inset 0px 0px 6px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 6px -2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 6px -2px rgba(0,0,0,0.75);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 19px;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 2px;
+    background-color: #AD3737;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #CCCCCC;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #CCCCCC;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+</style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="gamecontainer">
+                <div class="tilecont"><div class="tile" id="tile1"></div></div>
+                <div class="tilecont"><div class="tile" id="tile2"></div></div>
+                <div class="tilecont"><div class="tile" id="tile3"></div></div>
+                <div class="tilecont"><div class="tile" id="tile4"></div></div>
+                <div id="controlcont">
+                    <div id="control">
+                        <div id="panel">
+                            <div id="title">Simon</div>
+                            <div class="paneldiv">
+                                <div id="counter">
+                                    --
+                                </div>
+                                Count
+                            </div>
+                            <div class="paneldiv">
+                                <div id="startbtn"></div>
+                                Start
+                            </div>
+                            <div class="paneldiv">
+                                <div id="strictlightcont">
+                                    <div id="strictlight"></div>
+                                </div>
+                                <div id="strictbtn"></div>
+                                Strict
+                            </div>
+                            <label class="switch">
+                              <input type="checkbox" id="power">
+                              <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top:15px;">
+                Designed and written by <a href="http://www.marapets.com/profile.php?id=2419422" target="#blank"><span class="cred">Eric</span></a>.
+            </div>
+        </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+let powerOn = false;
+let input = [];
+let sequence = [];
+let unlit = [null, "#4C7348", "#963737", "#C5D14E", "#505980"];
+let lit = [null, "#67EE6B", "#FF5858", "#FBFF50", "#607EFF"];
+let sounds = [
+    null,
+    "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3",
+    "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3",
+    "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3",
+    "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
+];
+let gameStarted = false;
+let strict = false;
+
+function runNewTurn() {
+    gameStarted = true;
+    sequence.push(Math.ceil(Math.random() * 4));
+    $("#counter").html(sequence.length < 10 ? "0" + sequence.length : sequence.length);
+    console.log('running turn...');
+    setTimeout(function(){
+        // change strict mode here
+        playSequence(0);
+    }, 1200);
+}
+
+function clearGame() {
+    sequence = [];
+    input = [];
+}
+
+// RECURSIVE CALLS LIGHTTILE METHOD ASYNCHRONOUSLY
+function playSequence(index) {
+    if (powerOn) {
+        $(".tile").off("click", tileHandler);
+        lightTile(sequence[index], function() {
+            index++;
+            if (index < sequence.length) {
+                playSequence(index);
+            } else {
+                $(".tile").on("click", tileHandler);
+                if (!gameStarted) {
+                    $("#counter").html("--");
+                } else {
+                    $("#counter").html(sequence.length < 10 ? "0" + sequence.length : sequence.length);
+                }
+            }
+        });
+    } else {
+        index = 0;
+        $(".tile").off("click", tileHandler);
+        clearGame();
+    }
+    console.log(sequence);
+    console.log(index);
+}
+
+function lightTile(num, callback) {
+    $("#tile"+num).css('background-color', lit[num]);
+    var audio = new Audio(sounds[num]);
+    audio.play();
+    setTimeout(function(){
+        $("#tile"+num).css('background-color', unlit[num]);
+        setTimeout(function(){
+            callback();
+        }, 500);
+    }, 400);
+}
+
+function tileFeedback(id) {
+    let tilenum = id[4];
+    $("#"+id).css('background-color', lit[tilenum]);
+    var audio = new Audio(sounds[tilenum]);
+    audio.play();
+    setTimeout(function(){
+        // change strict mode here
+        $("#"+id).css('background-color', unlit[tilenum]);
+    }, 50);
+}
+
+
+// Event Handlers on app open
+
+let tileHandler = function() {
+    if (gameStarted && powerOn) {
+        console.log("click")
+        let id = this.id;
+        tileFeedback(id);
+        if (id == "tile" + sequence[input.length]) {
+            input.push(id);
+        } else {
+            $("#counter").html("!!");
+            input = [];
+            console.log("wrong!")
+            console.log(id)
+            console.log("tile" + sequence[input.length])
+            $(".tile").off("click", tileHandler);
+            setTimeout(function(){
+                if (strict) {
+                    sequence = [];
+                    runNewTurn();
+                } else {
+                    playSequence(0);
+                }
+            }, 2000);
+        }
+        if (input.length == sequence.length && input.length == 20) {
+            $("#counter").html("WIN");
+            clearGame();
+            $(".tile").off("click", tileHandler);
+            setTimeout(function(){
+                runNewTurn();
+            }, 3000);
+        } else if (input.length == sequence.length) {
+            $(".tile").off("click", tileHandler);
+            runNewTurn();
+            input = [];
+        }
+    }
+}
+
+$(".tile").bind("click", tileHandler);
+
+$("#power").click(function() {
+    if(powerOn) {
+        $("#counter").html("--");
+        $("#counter").css("color", "#232323");
+        clearGame();
+        powerOn = false;
+        gameStarted = false;
+        // index = 0;
+        $("#strictlight").css("background-color", "#393836");
+        strict = false;
+    } else {
+        $("#counter").css("color", "#DC3737");
+        powerOn = true;
+    }
+});
+
+$("#startbtn").click(function() {
+    if (powerOn && !gameStarted) {
+        $(".tile").off("click", tileHandler);
+        runNewTurn();
+    }
+});
+
+$("#strictbtn").click(function() {
+    if (strict) {
+        console.log("strict off");
+        $("#strictlight").css("background-color", "#393836");
+        strict = false;
+    } else {
+        if (powerOn) {
+            console.log("strict on");
+            $("#strictlight").css("background-color", "red");
+            strict = true;
+        }
+    }
+});
+
+</script>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  border-bottom: 2px dashed #C1C1C1;
+  padding-bottom: 2px;
+}
+.wrapper {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+}
+.container {
+  width: 600px;
+  box-shadow: 0 8px 6px -6px black;
+  border: 2px solid #A3A3A3;
+  border-radius: 5px;
+  background: #DADADA;
+  padding-bottom: 20px;
+  text-align: center;
+
+}
+#calc {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+}
+#result {
+  color: red;
+  font-weight: bold;
+}
+#credit {
+  text-align: center;
+}
+.red {
+  color: red;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Marapets Shop Size Calculator</h1>
+        Current Shop Size: <input type="number" id="csize"><br>
+      <br>
+
+        Desired Shop Size: <input type="number" id="dsize"><br>
+        <br>
+        <button onclick="calculateSize()" id="calc">CALCULATE</button>
+      <p>Total cost: <span id="result"></span></p>
+    </div>
+    <div id="credit">
+      <p>Made with <span class="red"><i class="fa fa-heart" aria-hidden="true"></i></span> from <a href="http://www.marapets.com/profile.php?id=2419422">Eric</a></p>
+    </div>
+  </div>
+</body>
+<script>
+
+function calculateSize() {
+  var valid = true;
+  var csize = document.getElementById("csize").value == "" ? (document.getElementById("result").innerHTML = "Please input numbers into all fields.",valid=false) : +(document.getElementById("csize").value);
+
+  var cost = (csize+1)*50;
+
+  var dsize = document.getElementById("dsize").value == "" ? (document.getElementById("result").innerHTML = "Please input numbers into all fields.",valid=false) : +(document.getElementById("dsize").value);
+
+  if (valid) {
+    if (csize > dsize) {
+      document.getElementById("result").innerHTML = "Current size cannot be greater than desired size";
+    } else {
+      var n = (dsize-csize);
+      var result = ((cost * n) + (50*((n-1)*((n-1)+1)/2)));
+      document.getElementById("result").innerHTML = result.toLocaleString() + " MP";
+    }
+  }
+}
+
+</script>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<style>
+#background {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #000000;
+}
+p {
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+}
+#layout {
+	width: 680px;
+	height: 770px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#container {
+	width: 90%;
+	height: 95%;
+	margin: auto;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+.clear {
+	clear:both;
+}
+
+#menu-wrap {
+	width: auto;
+	height: auto;
+    font-size: 0px;
+    position:relative;
+	z-index:9999;
+}
+#menu {
+    text-align:left;
+    height: auto;
+    width: auto;
+}
+#menu ul {
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+}
+#menu ul li {
+	color: #4F595C;
+	list-style:none;
+	display: inline-block;
+	line-height: 10px;
+	position: relative;
+}
+#menu ul li:hover ul {
+	display: block;
+}
+#menu ul ul {
+	display:none;
+    position:absolute;
+    background-color:#B91428;
+    min-width: 80px;
+    opacity: 0.95;
+}
+#menu ul ul a {
+    min-width: 75px;
+}
+#menu ul ul li {
+    text-align: center;
+    border-bottom: 1px #696969 solid;
+}
+#menu > ul > li > a {
+	box-shadow: inset 1px 1px 8px #363636;
+	border-left: 1px grey solid;
+}
+#menu a {
+	color: #ffffff;
+	font-size: 11px;
+	text-decoration: none;
+	text-shadow: 1px 1px #B38452;
+	display: inline-block;
+	padding: 4px 20px;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	background: #6E8E99;
+	opacity: 0.8;
+}
+#menu a:hover {
+	color: #000000;
+	background: #72A4B5;
+	opacity: 0.8;
+}
+
+#menu > ul > li > a:hover {
+	cursor: default;
+}
+
+#menu > ul > ul > li > a:hover {
+	cursor: pointer;
+}
+
+#content{
+	width: 100%;
+	height: 185px;
+	margin-top: 8px;
+	overflow: hidden;
+}
+#page{
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	opacity: 0.8;
+	overflow-y: scroll;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.headings {
+	color: #1385AB;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	border: 1px #1385AB;
+	border-style: none none dotted none;
+	border-width: 1px;
+}
+
+
+#announcement {
+	margin-top: 110px;
+	width: 475px;
+	height:auto;
+	color: #255261;
+	border: 1px grey solid;
+	font-family: "Open Sans", sans-serif;
+	font-size: 11px;
+	background-color: #ffffff;
+	opacity: 0.8;
+	box-shadow: 0px 0px 10px #ffffff;
+	box-sizing: border-box;
+}
+
+#box-wrapper {
+	margin-top: 20px;
+	width: 100%;
+	height: 300px;
+}
+
+#box-one {
+	float:left;
+	background-color: #ffffff;
+	opacity: 0.8;
+	width: 32%;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 11px;
+	overflow-y:scroll;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#box-two {
+	float:left;
+	margin-left: 2%;
+	background-color: #ffffff;
+	opacity: 0.8;
+	width: 32%;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 11px;
+	overflow-y:scroll;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#box-three {
+	float:left;
+	margin-left: 2%;
+	background-color: #ffffff;
+	opacity: 0.8;
+	width: 32%;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 11px;
+	overflow-y:scroll;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+
+#credit {
+	margin: 34px auto 0px auto;
+	color: #255261;
+	width: auto;
+	height: auto;
+}
+#credit a {
+	color: #657B82;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+	text-decoration: none;
+}
+#credit a:hover {
+	color: #255261;
+	text-decoration: none;
+}
+#credit p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #255261;
+}
+
+.clear {
+	clear: both;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+background-color:#854E28;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+}
+
+::-webkit-scrollbar {
+width:5px;
+height:5px;
+background-color:#DEDEDE;
+}
+
+</style>
+</head>
+
+
+<body>
+<img src="http://i.imgur.com/X52Y63n.jpg" id="background">
+<div id="layout">
+<div id="container">
+<div id="menu-wrap">
+    <nav id="menu">
+		<ul>
+			<li><a>Main</a>
+				<ul>
+					<li><a href="#one">Welcome</a></li>
+					<li><a href="#two">Ranks</a></li>
+					<li><a href="#three">Other</a></li>
+				</ul>
+			</li>
+			<li><a>Members</a>
+				<ul>
+					<li><a href="#four">Members List</a></li>
+					<li><a href="#five">Birthdays</a></li>
+					<li><a href="#six">Nicknames</a></li>
+				</ul>
+			</li>
+			<li><a>Fun</a>
+				<ul>
+					<li><a href="#seven">Mini-Games</a></li>
+					<li><a href="#eight">Giveaways</a></li>
+					<li><a href="#nine">Raffle</a></li>
+				</ul>
+			</li>
+			<li><a>Advertise</a>
+				<ul>
+					<li><a href="#ten">Item Swap</a></li>
+					<li><a href="#eleven">Contest Help</a></li>
+					<li><a href="#twelve">1MP Auctions</a></li>
+				</ul>
+			</li>
+		</ul>
+    </nav>
+</div> <!-- end menu-wrap -->
+
+<div id="content">
+
+<div id="page"> <!-- start page -->
+<a name="one"></a>
+	<div class="headings">Welcome!</div>
+	<p>VHS literally mumblecore mixtape listicle. Deep v 8-bit pop-up trust fund, banjo church-key polaroid food truck. PBR&B mixtape ennui, freegan kogi meditation migas. 8-bit quinoa neutra green juice, vice blue bottle echo park  pack craft beer. Tumblr lumbersexual heirloom, tousled VHS hella truffaut butcher craft beer four dollar toast ethical narwhal sustainable gentrify. Chia YOLO craft beer, bicycle rights salvia fixie flexitarian put a bird on it kickstarter scenester plaid keffiyeh slow-carb fap. Sustainable poutine stumptown banh mi 3 wolf moon tofu, mixtape skateboard pinterest.</p>
+
+<p>Hella mustache banjo austin aesthetic biodiesel, +1 four dollar toast green juice vegan pinterest occupy. Cliche echo park tofu, biodiesel kickstarter flannel single-origin coffee hammock heirloom paleo knausgaard ugh freegan shabby chic. Portland four loko fixie tofu pabst. Ethical umami kickstarter vegan before they sold out 90's pabst jean shorts. Letterpress street art ramps swag, brunch wayfarers yuccie health goth lumbersexual. IPhone brunch four dollar toast, shabby chic kombucha kickstarter tacos photo booth bitters tofu. Four loko PBR&B raw denim, umami put a bird on it offal narwhal.</p>
+
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="two"></a>
+	<div class="headings">Ranks</div>
+	<p>Disrupt tattooed tousled craft beer hammock duis. Accusamus anim small batch gluten-free. Neutra tote bag tattooed, velit YOLO ullamco before they sold out reprehenderit pickled celiac craft beer. Sed photo booth thundercats quinoa, wayfarers ea brunch aute man braid typewriter yuccie letterpress. Tilde crucifix truffaut +1 salvia eu, cred wolf migas cupidatat selfies pinterest. Cred occupy ethical, marfa listicle fingerstache whatever exercitation roof party forage franzen meh VHS skateboard DIY. Keffiyeh velit eiusmod literally.</p>
+
+<p>Gentrify velit VHS echo park. Organic brunch esse excepteur, in +1 bitters heirloom chia chicharrones health goth stumptown odio. Deserunt trust fund bespoke, tumblr selfies velit taxidermy letterpress before they sold out ex helvetica. Tilde mollit wayfarers, qui narwhal delectus fashion axe messenger bag mustache XOXO ad chartreuse cardigan. Banjo magna kogi whatever do. Hammock 3 wolf moon neutra, exercitation nihil meggings accusamus aesthetic eu quis austin letterpress lumbersexual XOXO. Culpa tilde tumblr, laborum bespoke godard esse labore hashtag qui vice scenester VHS duis.</p>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="three"></a>
+	<div class="headings">Other</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="four"></a>
+	<div class="headings">Members List</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="five"></a>
+	<div class="headings">Birthdays</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="six"></a>
+	<div class="headings">Nicknames</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="seven"></a>
+	<div class="headings">Mini-Games</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="eight"></a>
+	<div class="headings">Giveaways</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="nine"></a>
+	<div class="headings">Raffles</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="ten"></a>
+	<div class="headings">Item Swap</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="eleven"></a>
+	<div class="headings">Contest Help</div>
+</div> <!-- end page -->
+
+<div id="page"> <!-- start page -->
+<a name="twelve"></a>
+	<div class="headings">1MP Auctions</div>
+</div> <!-- end page -->
+
+
+
+
+</div> <!-- end content -->
+
+
+<div id="announcement">
+<marquee behavior="scroll" direction="left">Type any club announcements here... </marquee>
+</div> <!-- end announcement -->
+
+
+
+<div id="box-wrapper"> <!-- start bottom box -->
+	<div id="box-one">
+		<div class="headings">Side box 1</div>
+	<p>VHS literally mumblecore mixtape listicle. Deep v 8-bit pop-up trust fund, banjo church-key polaroid food truck. PBR&B mixtape ennui, freegan kogi meditation migas. 8-bit quinoa neutra green juice, vice blue bottle echo park  pack craft beer. Tumblr lumbersexual heirloom, tousled VHS hella truffaut butcher craft beer four dollar toast ethical narwhal sustainable gentrify. Chia YOLO craft beer, bicycle rights salvia fixie flexitarian put a bird on it kickstarter scenester plaid keffiyeh slow-carb fap. Sustainable poutine stumptown banh mi 3 wolf moon tofu, mixtape skateboard pinterest.</p>
+
+<p>Hella mustache banjo austin aesthetic biodiesel, +1 four dollar toast green juice vegan pinterest occupy. Cliche echo park tofu, biodiesel kickstarter flannel single-origin coffee hammock heirloom paleo knausgaard ugh freegan shabby chic. Portland four loko fixie tofu pabst. Ethical umami kickstarter vegan before they sold out 90's pabst jean shorts. Letterpress street art ramps swag, brunch wayfarers yuccie health goth lumbersexual. IPhone brunch four dollar toast, shabby chic kombucha kickstarter tacos photo booth bitters tofu. Four loko PBR&B raw denim, umami put a bird on it offal narwhal.</p>
+	</div>
+
+	<div id="box-two">
+	<div class="headings">Side box 2</div>
+	<p>Excepteur vice locavore, nesciunt hammock twee put a bird on it elit quis mustache. Ramps bicycle rights sint, try-hard do tacos kale chips nihil pabst 90's. Sustainable lumbersexual deserunt, normcore pug chillwave crucifix. Gluten-free biodiesel keffiyeh lumbersexual portland minim. Esse delectus lomo, paleo sapiente letterpress food truck culpa plaid brunch crucifix occaecat XOXO ex scenester. Kickstarter taxidermy anim wolf butcher, tofu tumblr. Mlkshk authentic raw denim, selfies PBR&B squid do DIY williamsburg flannel.</p>
+
+<p>Mixtape skateboard truffaut, asymmetrical helvetica ennui crucifix waistcoat. Bicycle rights qui bitters chia, trust fund do sartorial. Marfa celiac art party proident, VHS cliche chartreuse selfies accusamus tempor. XOXO cred chia austin, lo-fi voluptate pickled truffaut keffiyeh aute meditation assumenda. Tousled yr readymade DIY squid, labore jean shorts swag. Literally before they sold out swag, four dollar toast eiusmod odio duis keffiyeh hashtag laborum kinfolk green juice enim flannel lomo. Hoodie photo booth deserunt typewriter.</p>
+	</div>
+
+	<div id="box-three">
+	<div class="headings">Side box 3</div>
+	<p>Ea asymmetrical dolor, vero nisi duis tofu fugiat occupy neutra. Sapiente thundercats street art, chia wayfarers austin est. Occaecat literally semiotics non minim. Farm-to-table knausgaard hella squid direct trade locavore. Literally tattooed farm-to-table butcher. Leggings butcher bitters, cillum venmo dolor accusamus. Chicharrones messenger bag kinfolk, hella shoreditch  pack fingerstache try-hard kickstarter.</p>
+
+<p>Artisan 90's raw denim microdosing chillwave jean shorts. IPhone asymmetrical ullamco, artisan photo booth heirloom cliche fashion axe everyday carry ennui. Esse VHS yr, health goth venmo  pack butcher occaecat food truck viral. Waistcoat +1 laborum elit, aesthetic plaid placeat non portland gentrify direct trade esse XOXO slow-carb cillum. Tote bag yr ugh selfies, gentrify jean shorts ramps. Mollit 8-bit tattooed PBR&B polaroid. Selvage gochujang flannel vero est, reprehenderit elit.</p>
+	</div>
+
+</div> <!-- end bottom box -->
+
+<div class="clear"></div>
+
+<div id="credit">
+<p>Layout by <a href="http://www.marapets.com/profile.php?id=2419422">Eric</a>.</p>
+</div>
+
+</div> <!-- end container -->
+
+</div>
+
+
+
+
+
+</body>
+</html>

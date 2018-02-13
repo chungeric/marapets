@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+<style>
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	color: #737373;
+	opacity: 0.8;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+#background {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#layout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 688px;
+	height: 800px;
+}
+#container {
+	width: 586px;
+	height: 550px;
+	margin-top: 235px;
+	margin-left: 51px;
+}
+#menu-wrap {
+	width: auto;
+	max-width: 586px;
+	height: auto;
+    font-size: 0px;
+    position:relative;
+	z-index:9999;
+	border: 1px rgba(4,49,97,0.6);
+	border-style: solid none solid none;
+	box-sizing: border-box;
+}
+#menu { 
+    text-align:left;
+    height: auto;
+    width: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+#menu ul {
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+}
+#menu ul li {
+	color: #4F595C;
+	list-style:none;
+	display: inline-block;
+	line-height: 10px;
+	position: relative;
+}
+#menu ul li:hover ul {
+	display: block;
+}
+#menu ul ul {
+	display:none;
+    position:absolute;
+    min-width: 80px;
+}
+#menu ul ul a {
+    min-width: 75px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+#menu ul ul li {
+    text-align: center;
+    border-bottom: 1px dotted rgba(105,105,105,0.9);
+}
+#menu > ul > li > a {
+	border-left: 1px grey dashed;
+}
+#menu a {
+	color: #ffffff;
+	font-size: 14px;
+	text-decoration: none;
+	text-shadow: 1px 1px 20px #134B5E;
+	display: inline-block;
+	padding: 7px 20px;
+	-webkit-transition-duration: 0.7s;
+	transition-duration: 0.7s;
+	background: rgba(179,176,21,0.2);
+	text-transform: uppercase;
+	font-family: 'Poiret One', cursive;
+}
+#menu a:hover {
+	color: #CDCEFA;
+	background: rgba(114,164,181,0.8);
+}
+#menu > ul > li > a:hover {
+	cursor: default;
+}
+
+#menu > ul > ul > li > a:hover {
+	cursor: pointer;
+}
+.heading {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+	color: #002E5E;
+	border-bottom: 1px dashed #2D5663;
+	border-left: 4px dotted #2D5663;
+	border-radius: 7px;
+	padding-left: 3px;
+	opacity: 0.8;
+}
+#left-container {
+	float:left;
+	height: 438px;
+	width: 296px;
+	margin-top: 21px;
+}
+#right-container {
+	float:right;
+	height: 444px;
+	width: 275px;
+	margin-top: 15px;
+}
+#announcement {
+	width: 100%;
+	height: 26px;
+	font-family: 'Open Sans', sans-serif;
+	color: #224C4F;
+	font-size: 10px;
+	margin-top: 5px;
+	text-shadow: 1px 1px 7px #134B5E;
+}
+#content {
+	margin-top: 15px;
+	width: 100%;
+	height: 395px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.page {
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	padding: 7px;
+	box-sizing: border-box;
+}
+#static-one {
+	width: 100%;
+	height: 144px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	overflow-y:scroll;
+	padding: 7px;
+}
+#static-two {
+	width: 100%;
+	height: 144px;
+	margin-top: 7px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	overflow-y:scroll;
+	padding: 7px;
+}
+#static-three {
+	width: 100%;
+	height: 144px;
+	margin-top: 8px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	overflow-y:scroll;
+	padding: 7px;
+}
+#credit {
+	position: absolute;
+	bottom: 40px;
+	right: 260px;
+	font-size: 16px;
+	color: #FAFCBD;
+	font-family: 'Poiret One', cursive;
+}
+#credit a{
+	color: #FAFCBD;
+	font-family: 'Poiret One', cursive;
+}
+#credit a:hover{
+	color: #ffffff;
+}
+
+
+::-webkit-scrollbar-thumb:vertical {
+background-color:#599C97;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+}
+::-webkit-scrollbar {
+width:5px;
+height:5px;
+background-color:#DEDEDE;
+}
+</style>
+</head>
+<body>
+<img src="http://i1275.photobucket.com/albums/y442/DiviseArt/Divinity_zps3omaketo.gif" id="background">
+<div id="layout">
+<div id="container">
+<div id=menu-wrap>
+    <nav id=menu>
+		<ul>
+			<li><a>MAIN</a>
+				<ul>
+					<li><a href=/club.php?id=186290#1>Welcome</a></li>
+					<li><a href=/club.php?id=186290#2>Ranks</a></li>
+					<li><a href=/club.php?id=186290#3>Other</a></li>
+				</ul>
+			</li>
+			<li><a>MEMBERS</a>
+				<ul>
+					<li><a href=/club.php?id=186290#4>Members List</a></li>
+					<li><a href=/club.php?id=186290#5>Birthdays</a></li>
+					<li><a href=/club.php?id=186290#6>Nicknames</a></li>
+				</ul>
+			</li>
+			<li><a>FUN</a>
+				<ul>
+					<li><a href=/club.php?id=186290#7>Mini-Games</a></li>
+					<li><a href=/club.php?id=186290#8>Giveaways</a></li>
+					<li><a href=/club.php?id=186290#9>Raffle</a></li>
+				</ul>
+			</li>
+			<li><a>ADVERTISE</a>
+				<ul>
+					<li><a href=/club.php?id=186290#10>Item Swap</a></li>
+					<li><a href=/club.php?id=186290#11>Contest Help</a></li>
+					<li><a href=/club.php?id=186290#12>1MP Auctions</a></li>
+				</ul>
+			</li>
+		</ul>
+    </nav>
+</div>
+<div id="left-container">
+	<div id="announcement">
+	<marquee behavior="scroll" direction="left">Type any club announcements here...</marquee>
+	</div>
+	
+	<div id="content">
+		
+	<div class="page">
+	<a name="1"></a>
+	<div class="heading">Welcome</div>
+	<p>Wayfarers viral helvetica bespoke, non chambray pop-up truffaut intelligentsia typewriter bicycle rights letterpress 8-bit trust fund whatever. Elit fanny pack crucifix cardigan paleo mollit. Non echo park direct trade ugh, master cleanse dreamcatcher umami cardigan. DIY et non typewriter sunt, kale chips bicycle rights in laboris cronut mixtape green juice locavore ennui plaid. Bitters etsy selvage affogato, everyday carry hammock try-hard XOXO food truck yr polaroid mustache poutine normcore excepteur. Brooklyn messenger bag humblebrag flannel, schlitz in gentrify everyday carry plaid leggings neutra. Gluten-free id cliche microdosing.</p>
+
+<p>Tattooed mollit flexitarian neutra shabby chic health goth. Listicle meditation bespoke flexitarian, green juice ramps neutra XOXO schlitz twee four loko vinyl. Fashion axe laboris art party, fanny pack plaid cliche tattooed. Brooklyn put a bird on it trust fund, fashion axe roof party taxidermy labore wolf freegan yr try-hard. Street art eu messenger bag, laboris skateboard truffaut aute deserunt mustache master cleanse ugh. Lo-fi crucifix magna nesciunt. Synth blue bottle readymade flannel leggings.</p>
+
+<p>Tacos chia mumblecore kitsch cliche cold-pressed. Tofu gluten-free jean shorts, sustainable photo booth ethical selvage tumblr PBR&B mumblecore kitsch roof party post-ironic gastropub. Man braid ethical helvetica tousled twee mixtape. 8-bit portland biodiesel PBR&B yr, man braid flexitarian trust fund XOXO intelligentsia tacos fixie. Banh mi whatever viral typewriter. Fashion axe butcher 3 wolf moon kitsch leggings lumbersexual art party. Cardigan chillwave cold-pressed, pinterest godard lomo humblebrag plaid bicycle rights forage synth celiac migas.</p>
+	</div>
+	
+	<div class="page">
+	<a name="2"></a>
+	<div class="heading">Ranks</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="3"></a>
+	<div class="heading">Other</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="4"></a>
+	<div class="heading">Members List</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="5"></a>
+	<div class="heading">Birthdays</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="6"></a>
+	<div class="heading">Nicknames</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="7"></a>
+	<div class="heading">Mini-Games</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="8"></a>
+	<div class="heading">Giveaways</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="9"></a>
+	<div class="heading">Raffle</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="10"></a>
+	<div class="heading">Item Swap</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="11"></a>
+	<div class="heading">Contest Help</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	<div class="page">
+	<a name="12"></a>
+	<div class="heading">1MP Auctions</div>
+	<p>Insert text here...</p>
+	</div>
+	
+	
+	
+	</div>
+</div>
+<div id="right-container">
+	<div id="static-one">
+		<div class="heading">Side box 1</div>
+<p>Affogato listicle ennui knausgaard shabby chic, locavore truffaut ethical pop-up blue bottle asymmetrical. Cliche paleo put a bird on it kogi typewriter butcher, kombucha single-origin coffee lomo vegan tattooed kickstarter. Four dollar toast trust fund helvetica sustainable small batch. Fanny pack microdosing twee, chillwave waistcoat distillery cliche. Viral neutra meditation, hammock 3 wolf moon quinoa brooklyn tote bag thundercats authentic flexitarian poutine. Quinoa kitsch swag, locavore next level slow-carb vinyl fashion axe you probably haven't heard of them gastropub marfa lomo post-ironic artisan farm-to-table. Bitters pop-up dreamcatcher marfa, venmo keytar echo park mumblecore +1 microdosing flexitarian letterpress semiotics.</p>
+	</div>
+	<div id="static-two">
+		<div class="heading">Side box 2</div>
+	<p>Meggings kickstarter pitchfork, williamsburg chambray church-key you probably haven't heard of them. Ugh cred aesthetic trust fund, hella franzen schlitz pitchfork viral letterpress next level literally blog keffiyeh vegan. Street art meh kombucha ethical, kickstarter mustache before they sold out cronut you probably haven't heard of them church-key hella photo booth keffiyeh next level. Post-ironic mlkshk retro readymade tousled. Shoreditch mixtape quinoa, heirloom biodiesel plaid kogi meditation chambray stumptown bitters. Waistcoat direct trade normcore everyday carry chillwave, brunch kombucha VHS skateboard. Tofu 3 wolf moon skateboard, green juice tacos kitsch swag sustainable bespoke man braid portland tote bag.</p>
+	</div>
+	<div id="static-three">
+		<div class="heading">Side box 3</div>
+<p>Cronut sustainable drinking vinegar, yr flannel keffiyeh bicycle rights etsy kogi blog keytar 8-bit beard hella. Knausgaard cred aesthetic whatever disrupt cold-pressed, portland bicycle rights brunch hammock +1 thundercats art party umami. Hoodie tilde letterpress fap, scenester williamsburg ennui wayfarers. Migas forage kogi occupy. Bespoke chicharrones direct trade, before they sold out VHS bushwick pickled banh mi leggings bicycle rights DIY pug. Gentrify plaid flexitarian brooklyn gastropub actually dreamcatcher trust fund kombucha. Kitsch typewriter four dollar toast meditation, art party knausgaard gluten-free fingerstache.</p>
+	</div>
+</div>
+
+<div id="credit">Layout by <a href="http://www.marapets.com/profile.php?id=2419422">Eric</a> & <a href="http://www.marapets.com/profile.php?id=5413617">Divise</a></div>
+
+</div>
+</div>
+
+</body>
+</html>

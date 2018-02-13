@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel=stylesheet type='text/css'>
+
+<style>
+#background {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+p {
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+}
+#layout {
+	width: 680px;
+	height: 770px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#container {
+	width: 85%;
+	height: 80%;
+	margin: 135px auto 0px auto;
+}
+#topbar {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+#main-nav {
+	float:left;
+	width: auto;
+	height: auto;
+	display: inline;
+}
+#main-nav p {
+	display: inline;
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+#main-nav a{
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	font-size: 12px;
+	text-decoration: none;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+#main-nav a:hover {
+	color: #598AA8;
+	text-decoration: none;
+}
+#announcement {
+	float:left;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	width: 280px;
+	height:auto;
+	border-width: 1px;
+	border: 1px #000000;
+	border-style: solid;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-left: 18px;
+}
+#lower-container {
+	float: left;
+	margin-top: 15px;
+	width: 100%;
+	height: 90%;
+}
+#content-container {
+	float: left;
+	border: 1px #000000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 8px;
+	width: 70%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.3);
+	box-sizing: border-box;
+}
+#content {
+	width: 100%;
+	height: 1000px;
+	overflow-y: scroll;
+  	padding: 10px;
+  	box-sizing: border-box;
+}
+.headings {
+	color: #1385AB;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	border: 1px #1385AB;
+	border-style: none none dashed none;
+	padding-top: 20px;
+	border-width: 1px;
+}
+.subheadings {
+	color: #1385AB;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	border: 1px #1385AB;
+	border-style: none none double none;
+	border-width: 1px;
+	text-align: left;
+	margin-top: 10px;
+}
+
+#sidelinks-container {
+	float: right;
+	border: 1px #000000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 8px;
+	width: 27%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.3);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+#sidelinks {
+	width: 100%;
+	height: 1000px;
+	overflow-y: scroll;
+  	padding: 10px;
+  	box-sizing: border-box;
+}
+#sidelinks table {
+	border-collapse: collapse;
+	width: 100%;
+	height: auto;
+	text-align:left;
+}
+#sidelinks a{
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	box-sizing: border-box;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#sidelinks a:hover{
+	color: #ffffff;
+	background-color: #2F92AD;
+	text-decoration: none;
+}
+
+#credit {
+	margin: 15px auto 0px auto;
+	color: #ffffff;
+	width: auto;
+	height: auto;
+}
+#credit a {
+	color: #B0B547;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+	text-decoration: none;
+}
+#credit a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+#credit p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.clear {
+	clear: both;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+background-color:#1385AB;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+}
+
+::-webkit-scrollbar {
+width:5px;
+height:5px;
+background-color:#fff;
+}
+
+
+</style>
+</head>
+
+
+<body>
+<img src="http://i.imgur.com/pJPjiHg.jpg" id="background">
+<div id="layout">
+<div id="container">
+<div id="topbar">
+<div id="main-nav">
+	<p><a href="#one">Welcome</a> &nbsp;|&nbsp; </p>
+	<p><a href="#two">Rules</a> &nbsp;|&nbsp; </p>
+	<p><a href="#three">Staff</a> &nbsp;|&nbsp; </p>
+	<p><a href="#four">About</a> || </p>
+</div>
+<div id="announcement">
+<marquee behavior="scroll" direction="left">Type any announcements here... </marquee>
+</div>
+</div>
+
+<div id="lower-container">
+
+<div id="content-container"  style=overflow:hidden;>
+
+<div id="content">
+<a name="one"></a>
+<div class="headings">Welcome!</div>
+<p>VHS literally mumblecore mixtape listicle. Deep v 8-bit pop-up trust fund, banjo church-key polaroid food truck. PBR&B mixtape ennui, freegan kogi meditation migas. 8-bit quinoa neutra green juice, vice blue bottle echo park fanny pack craft beer. Tumblr lumbersexual heirloom, tousled VHS hella truffaut butcher craft beer four dollar toast ethical narwhal sustainable gentrify. Chia YOLO craft beer, bicycle rights salvia fixie flexitarian put a bird on it kickstarter scenester plaid keffiyeh slow-carb fap. Sustainable poutine stumptown banh mi 3 wolf moon tofu, mixtape skateboard pinterest.</p>
+
+<p>Hella mustache banjo austin aesthetic biodiesel, +1 four dollar toast green juice vegan pinterest occupy. Cliche echo park tofu, biodiesel kickstarter flannel single-origin coffee hammock heirloom paleo knausgaard ugh freegan shabby chic. Portland four loko fixie tofu pabst. Ethical umami kickstarter vegan before they sold out 90's pabst jean shorts. Letterpress street art ramps swag, brunch wayfarers yuccie health goth lumbersexual. IPhone brunch four dollar toast, shabby chic kombucha kickstarter tacos photo booth bitters tofu. Four loko PBR&B raw denim, umami put a bird on it offal narwhal.</p>
+</div>
+
+<div id="content">
+<a name="two"></a>
+<div class="headings">Rules</div>
+<p>Pork belly gentrify fap leggings, skateboard banjo waistcoat readymade flannel narwhal. Typewriter swag blog ramps cray, bushwick chartreuse asymmetrical raw denim ugh letterpress health goth synth. Ramps food truck raw denim, direct trade poutine offal kombucha locavore. Knausgaard chillwave affogato twee fashion axe. Vegan meggings post-ironic skateboard fanny pack bicycle rights, crucifix narwhal leggings pitchfork typewriter yuccie 90's. Bushwick humblebrag flannel readymade jean shorts franzen. Chillwave artisan tousled, +1 cliche farm-to-table health goth PBR&B migas.</p>
+
+<p>Gochujang tote bag artisan semiotics, neutra brunch pabst celiac schlitz. Shabby chic 90's ethical crucifix iPhone. Health goth iPhone art party chillwave, photo booth vinyl chicharrones knausgaard intelligentsia tilde swag bespoke blue bottle disrupt umami. Man bun pickled thundercats, meggings normcore 8-bit fanny pack pour-over occupy banjo lo-fi ennui DIY narwhal austin. Poutine portland twee, tattooed taxidermy literally vegan everyday carry butcher. Cornhole microdosing typewriter gochujang. Hoodie cardigan ramps, distillery bitters brunch chambray.</p>
+</div>
+
+<div id="content">
+<a name="three"></a>
+<div class="headings">Staff</div>
+<p>Marfa literally iPhone biodiesel fap, tousled ugh. Ramps godard letterpress, distillery kickstarter typewriter echo park gentrify. Banh mi gentrify tofu yuccie raw denim wolf. Master cleanse ethical viral beard VHS. Vice portland fashion axe mustache. Selvage viral tote bag pop-up. Whatever lo-fi 90's listicle, four loko put a bird on it pinterest XOXO viral.</p>
+
+<p>Viral raw denim sriracha chambray fanny pack DIY health goth. Cliche normcore fashion axe vinyl, meh mixtape seitan 8-bit cred. DIY farm-to-table neutra skateboard lo-fi distillery cold-pressed photo booth small batch, hammock seitan 90's salvia lomo. Selvage affogato wayfarers, mixtape neutra aesthetic umami lomo cornhole stumptown cred try-hard. You probably haven't heard of them bitters twee farm-to-table, synth 90's heirloom. Microdosing ramps ugh roof party twee everyday carry. Intelligentsia literally tacos shoreditch wayfarers.</p>
+</div>
+
+<div id="content">
+<a name="four"></a>
+<div class="headings">About</div>
+<p>Put a bird on it heirloom chambray mustache migas, letterpress keffiyeh umami gastropub narwhal fashion axe. Trust fund fanny pack yuccie single-origin coffee roof party. Tattooed flexitarian church-key, beard master cleanse gochujang man bun authentic craft beer. Tousled waistcoat helvetica biodiesel pork belly DIY. Whatever four dollar toast tousled, flexitarian bushwick kinfolk tilde cray small batch blue bottle single-origin coffee. Franzen shabby chic authentic DIY gluten-free. Artisan tacos vinyl biodiesel, chambray four loko pop-up ramps.</p>
+
+<p>Godard keffiyeh disrupt migas single-origin coffee tacos, bicycle rights vegan pickled YOLO. Cliche actually vice, umami ramps seitan squid messenger bag truffaut. Microdosing cold-pressed hammock, art party banh mi godard aesthetic dreamcatcher. Drinking vinegar chambray knausgaard before they sold out, trust fund stumptown umami. Pabst mixtape helvetica, slow-carb try-hard kombucha raw denim bicycle rights shabby chic ramps. Paleo intelligentsia dreamcatcher you probably haven't heard of them, next level heirloom wolf chia leggings brunch. Church-key plaid YOLO, schlitz hella stumptown crucifix humblebrag fap.</p>
+</div>
+
+<div id="content">
+<a name="five"></a>
+<div class="headings">Link One</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="six"></a>
+<div class="headings">Link Two</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="seven"></a>
+<div class="headings">Link Three</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="eight"></a>
+<div class="headings">Link Four</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="nine"></a>
+<div class="headings">Link Five</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="ten"></a>
+<div class="headings">Link Six</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="eleven"></a>
+<div class="headings">Link Seven</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="twelve"></a>
+<div class="headings">Link Eight</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="thirteen"></a>
+<div class="headings">Link Nine</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="fourteen"></a>
+<div class="headings">Link Ten</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="fifteen"></a>
+<div class="headings">Link Eleven</div>
+<p>Insert text here...</p>
+</div>
+
+<div id="content">
+<a name="sixteen"></a>
+<div class="headings">Link Twelve</div>
+<p>Insert text here...</p>
+</div>
+
+</div>
+
+<div id="sidelinks-container">
+	<div id="sidelinks">
+		<div class="headings">Club Links</div>
+		
+		<div class="subheadings" style="italic">Members</div>
+		<table>
+		<tr><td><a href="#five"><strong>Link 1</strong></a></td></tr>
+		<tr><td><a href="#six"><strong>Link 2</strong></a></td></tr>
+		<tr><td><a href="#seven"><strong>Link 3</strong></a></td></tr>
+		<tr><td><a href="#eight"><strong>Link 4</strong></a></td></tr>
+		</table>
+		
+		<div class="subheadings">Fun</div>
+		<table>
+		<tr><td><a href="#nine"><strong>Link 5</strong></a></td></tr>
+		<tr><td><a href="#ten"><strong>Link 6</strong></a></td></tr>
+		<tr><td><a href="#eleven"><strong>Link 7</strong></a></td></tr>
+		<tr><td><a href="#twelve"><strong>Link 8</strong></a></td></tr>
+		</table>
+		
+		<div class=subheadings>Advertise</div>
+		<table>
+		<tr><td><a href="#thirteen"><strong>Link 9</strong></a></td></tr>
+		<tr><td><a href="#fourteen"><strong>Link 10</strong></a></td></tr>
+		<tr><td><a href="#fifteen"><strong>Link 11</strong></a></td></tr>
+		<tr><td><a href="#sixteen"><strong>Link 12</strong></a></td></tr>
+		</table>
+		
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div id="credit">
+<p>Layout by <a href="http://www.marapets.com/profile.php?id=2419422">Eric</a>.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

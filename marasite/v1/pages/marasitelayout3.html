@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+<!-- ########## S T Y L E ########## -->
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Roboto:300');
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+
+  font-size: 40px;
+}
+p {
+  line-height: 130%;
+  font-family: 'Roboto', sans-serif;
+
+}
+body {
+	color: #000000;
+	font-size: 12px;
+	letter-spacing: 1px;
+  font-family: 'Ubuntu', sans-serif;
+}
+#navbar {
+	height: 70px;
+	width: 100%;
+	position: fixed;
+  transition: 0.6s;
+  /*background-image: url("http://www.iclarified.com/images/news/50663/238567/238567.jpg");
+  background-size: 2000px;
+  background-position: left center;*/
+  background: #2A2A2A;
+  z-index: 1;
+}
+#logo {
+  height: 100%;
+  float: left;
+  margin-left: 50px;
+}
+#logo p {
+  margin-top: 13px;
+  line-height: normal;
+  font-size: 35px;
+  color: #EEF0DE;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#dropdown {
+  position: relative;
+  top: 12%; /* weird */
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin-right: 50px;
+  border: 2px solid #B0B0B0;
+  display: none;
+  font-size: 30px;
+  transition: 1s;
+}
+.downicon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  color: #B0B0B0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: 50px;
+  left: -108px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#dropdown:hover .downicon{
+  top: 150%;
+  opacity: 0;
+}
+#dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  height: 2000px;
+	width: 100%;
+  padding-top: 70px;
+}
+.intro {
+  margin: 50px auto 0px auto;
+  font-size: 20px;
+  width: 900px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: calc(100vh-70px);
+}
+.pets {
+  margin: 50px auto 0px auto;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  text-align: center;
+  background: #2F6487;
+}
+.pets h1 {
+  color: #ffffff;
+  text-align: left;
+}
+
+#nav {
+  float: right;
+  margin-top: 16px;
+}
+#nav ul li {
+	display: inline;
+	list-style-type: none;
+	margin-right: 100px;
+  font-family: 'Ubuntu', sans-serif;
+}
+#nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+#nav ul li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  transition: 0.4s;
+}
+@media (max-width: 960px) {
+  #logo {
+    height: 60%;
+  }
+  .logotoggle {
+    display: none;
+  }
+  #nav ul li {
+    margin-right: 50px;
+  }
+  #nav {
+    float: left;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 670px) {
+  #nav {
+    display: none;
+  }
+  #dropdown {
+    display: inline-block;
+  }
+}
+</style>
+</head>
+<body>
+<!-- ########## B O D Y ########## -->
+<div id="navbar">
+	<div id="logo">
+    <p>e<span class=logotoggle>ric<span></p>
+  </div>
+  <div id="nav">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">TRADE PRICES</a></i>
+      <li><a href="#">LINK 3</a></li>
+      <li><a href="#">LINK 4</a></li>
+      <li><a href="#">LINK 5</a></li>
+    </ul>
+  </div>
+
+  <div id="dropdown">
+    <span class="downicon"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+    <div class="dropdown-content">
+      <a href="#">HOME</a>
+      <a href="#">TRADE PRICES</a>
+      <a href="#">LINK 3</a>
+      <a href="#">LINK 4</a>
+      <a href="#">LINK 5</a>
+    </div>
+  </div>
+
+</div> <!-- end navbar -->
+<div class="content">
+  <div class="intro">
+    <h1>about me</h1>
+    <p>Hello! I'm Eric a fourth-year accounting and IT student residing in Australia. I'm very forgetful, indecisive and at times, a weirdo. Hope your eyes enjoy whatever's here so far. If you need to ask me something, or even just talk, just shoot me a maramail! </p>
+    <p>Mustache id yuccie snackwave. Four dollar toast vice hoodie fam vinyl shaman biodiesel, commodo adipisicing everyday carry PBR&B  pack coloring book. Pinterest jean shorts mollit kitsch irony sartorial cronut leggings mixtape sunt elit succulents stumptown. Salvia echo park  pack single-origin coffee cray dreamcatcher aliquip copper mug brooklyn raclette occupy. Chicharrones crucifix  pack dolore green juice.</p>
+  </div>
+  <div class="pets">
+    <h1>dream pets</h1>
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+    <img src="http://images.marapets.com/pets/Chibs_old.gif">
+  </div>
+</div>
+</body>
+</html>
