@@ -25,6 +25,10 @@ h1 {
   line-height: 1em;
   text-align: center;
 }
+h1 a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
 .nav-heading {
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
