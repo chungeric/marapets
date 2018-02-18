@@ -112,13 +112,13 @@ nav ul li a:hover {
 }
 
 
-/* Club Layouts Page */
+/* Club / Marasite Layouts Pages Styling */
 
-.club-layouts-wrapper {
+.layouts-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-.club-layout-item {
+.layout-item {
   flex: 0 0 calc(100%/3 - 20px);
   background-position: center;
   background-size: cover;
@@ -127,15 +127,15 @@ nav ul li a:hover {
   height: 300px;
   text-decoration: none;
 }
-.club-layout-item:nth-of-type(3n) {
+.layout-item:nth-of-type(3n) {
   margin-right: 0;
 }
 
-.club-layout-item:hover .club-layout-item-content {
+.layout-item:hover .layout-item-content {
   opacity: 1;
 }
 
-.club-layout-item-content {
+.layout-item-content {
   opacity: 0;
   color: #ffffff;
   padding: 20px;
