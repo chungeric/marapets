@@ -149,3 +149,57 @@ nav ul li a:hover {
 .link-label {
   text-decoration: underline;
 }
+
+
+/* Trades Prices */
+ul.trades-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+ul.trades-list li {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+}
+
+ul.trades-list li a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+ul.trades-list li img {
+  margin-top: 10px;
+}
+
+ul.trades-list li p {
+  margin-top: 12px;
+}
+
+@keyframes TRADE-HOVER {
+  0%   { transform: translateY(0px); }
+  50%   { transform: translateY(10px); }
+  100%   { transform: translateY(0px); }
+}
+
+ul.trades-list li:hover img {
+  animation: TRADE-HOVER 1.5s ease infinite;
+}
+
+ul.trades-list li:hover p {
+}
+
+ul.trades-list li:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.3);
+}
+
+ul.trades-list li:hover a {
+
+}
